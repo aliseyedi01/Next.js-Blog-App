@@ -1,7 +1,10 @@
+import Button from "@/components/customs/Button";
+
 export default function Home() {
   return (
-    <div className="h-screen flex items-center gap-2 justify-center  w-full bg-slate-400">
+    <div className="flex h-screen w-full items-center justify-center  gap-2 bg-slate-400">
       <h2>ali</h2>
+      
     </div>
   );
 }
