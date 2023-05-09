@@ -9,5 +9,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [require("flowbite/plugin"), require("prettier-plugin-tailwindcss")],
+  plugins: [require("flowbite/plugin")],
 };
