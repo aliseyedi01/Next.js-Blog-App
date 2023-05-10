@@ -1,0 +1,14 @@
+node_modules
+**/.next/**
+**/_next/**
+**/dist/**
+**/__tmp__/**
+.github
+.git
+**/emulators.backup/**
+ui-debug.log
+**/functions/**
+.next
+**/functions/node_modules/**
+functions
+functoins/node_modules
