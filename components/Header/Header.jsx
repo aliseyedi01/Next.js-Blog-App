@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <>
       <Navbar
-        className="font-rubik rounded-none bg-orange-400 font-ubuntu     "
+        className=" font-rubik rounded-none   bg-orange-400 font-ubuntu "
         fluid={true}
         rounded={true}
       >
@@ -33,7 +33,7 @@ export default function Header() {
           >
             <Dropdown.Header>
               <span className="block text-sm">Bonnie Green</span>
-              <span className="block truncate text-sm font-medium">aliseyedi@gmail.com</span>
+              <span className=" block truncate  text-sm font-medium ">aliseyedi@gmail.com</span>
             </Dropdown.Header>
             <Dropdown.Item>Dashboard</Dropdown.Item>
             <Dropdown.Item>Settings</Dropdown.Item>
@@ -44,12 +44,12 @@ export default function Header() {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="/Home" active={true}>
+          <Navbar.Link href="/home" active={true}>
             Home
           </Navbar.Link>
-          <Navbar.Link href="/About">About</Navbar.Link>
-          <Navbar.Link href="/Blog">Blog</Navbar.Link>
-          <Navbar.Link href="/Contact">Contact</Navbar.Link>
+          <Navbar.Link href="/about">About</Navbar.Link>
+          <Navbar.Link href="/blog">Blog</Navbar.Link>
+          <Navbar.Link href="/contact">Contact</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </>
