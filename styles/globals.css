@@ -5,3 +5,15 @@
 * {
   box-sizing: border-box;
 }
+
+/* theme */
+@import "primereact/resources/themes/lara-light-indigo/theme.css";
+
+/* core */
+@import "primereact/resources/primereact.min.css";
+
+/* icons primereact */
+@import "primeicons/primeicons.css";
+
+/* prime flex */
+@import "primeflex/primeflex.css";

@@ -1,9 +1,12 @@
-import Button from "@/components/customs/Button";
+import { Button } from "primereact/button";
 
 export default function Home() {
   return (
     <div className="flex h-screen w-full items-center justify-center  gap-2 bg-slate-400">
-      <h2 className="text-7xl ">ali seyedi</h2>
+      <Button label="Submit" />
+      <Button icon="pi pi-check" />
+      <Button label="Submit" icon="pi pi-check" />
+      <Button label="Submit" icon="pi pi-check" iconPos="right" />
     </div>
   );
 }
