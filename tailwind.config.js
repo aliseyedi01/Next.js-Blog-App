@@ -7,7 +7,11 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ubuntu: ["var(--font-ubuntu)"],
+      },
+    },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("prettier-plugin-tailwindcss"), require("flowbite/plugin")],
 };
