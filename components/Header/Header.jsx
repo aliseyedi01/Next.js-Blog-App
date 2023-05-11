@@ -51,9 +51,8 @@ export default function Header() {
       <div className="h-full flex  ">
         <ul className="flex gap-2 font-serif  font-bold capitalize items-center">
           {Items.map((item) => (
-            <Link rel="stylesheet" href={item.path}>
+            <Link rel="stylesheet" href={item.path} key={item.id}>
               <li
-                key={item.id}
                 className={`cursor-pointer hover:bg-green-400 flex rounded-md items-center gap-1  px-2 py-1  ${
                   item.path === activeRouter ? "text-white" : ""
                 }`}
