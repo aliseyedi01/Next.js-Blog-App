@@ -7,21 +7,25 @@ import { useRouter } from "next/router";
 
 const Items = [
   {
+    id: 1,
     name: "Home",
     path: "/home",
     icon: <AiFillHome />,
   },
   {
+    id: 2,
     name: "Blog",
     path: "/blog",
     icon: <AiFillFileText />,
   },
   {
+    id: 3,
     name: "About",
     path: "/about",
     icon: <HiUserGroup />,
   },
   {
+    id: 4,
     name: "Contact",
     path: "/contact",
     icon: <BsFillEnvelopeAtFill />,
@@ -31,7 +35,7 @@ const Items = [
 export default function Header() {
   const router = useRouter();
   const activeRouter = router.asPath;
-  console.log(router.asPath);
+  // console.log(router.asPath);
 
   return (
     <div className="bg-sky-500 w-full  flex justify-between  items-center  h-14 px-3">
@@ -46,10 +50,10 @@ export default function Header() {
 
       <div className="h-full flex  ">
         <ul className="flex gap-2 font-serif  font-bold capitalize items-center">
-          {Items.map((item, i) => (
+          {Items.map((item) => (
             <Link rel="stylesheet" href={item.path}>
               <li
-                key={i}
+                key={item.id}
                 className={`cursor-pointer hover:bg-green-400 flex rounded-md items-center gap-1  px-2 py-1  ${
                   item.path === activeRouter ? "text-white" : ""
                 }`}

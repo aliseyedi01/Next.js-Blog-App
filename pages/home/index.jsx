@@ -6,7 +6,7 @@ import React from "react";
 export default function home() {
   return (
     <>
-      <PageMetaHead title="Blog App" />
+      <PageMetaHead title="Home" />
 
       <div className="bg-gray-100 min-h-screen">
         <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
