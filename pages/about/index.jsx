@@ -1,15 +1,15 @@
 import PageMetaHead from "@/components/MetaHead/PageMetaHead";
 import Image from "next/image";
-import About from "@/public/image/About.jpg";
+import AboutImage from "@/public/image/About.jpg";
 
-export default function about() {
+export default function About() {
   return (
     <div className="bg-white">
       <PageMetaHead title="About" />
       <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="mb-4 md:mb-0">
-            <h1 className="text-4xl font-bold mb-4">About Our Blog</h1>
+            <h1 className="text-4xl font-bold mb-4">About Our Blog </h1>
             <p className=" leading-loose font-serif text-justify text-lg  ">
               Welcome to our blog! We are a team of passionate writers and content creators who are
               dedicated to providing informative and engaging articles on various topics that matter
@@ -21,7 +21,13 @@ export default function about() {
             </p>
           </div>
           <div className="w-full">
-            <Image src={About} alt="About image" width={800} height={600} className="rounded-lg" />
+            <Image
+              src={AboutImage}
+              alt="About image"
+              width={800}
+              height={600}
+              className="rounded-lg"
+            />
           </div>
         </div>
       </div>

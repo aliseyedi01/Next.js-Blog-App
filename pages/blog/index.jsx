@@ -1,11 +1,10 @@
 import PageMetaHead from "@/components/MetaHead/PageMetaHead";
-import React from "react";
 
-export default function blog() {
+export default function Blog() {
   return (
     <div className="grid h-screen place-content-center bg-red-400">
       <PageMetaHead title="Blog" />
-      Blog
+      my blog 3
     </div>
   );
 }

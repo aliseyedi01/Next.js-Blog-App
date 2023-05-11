@@ -5,7 +5,7 @@ import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
 
-export default function contact() {
+export default function Contact() {
   const [loading, setLoading] = useState(false);
   const toast = useRef(null);
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ export default function contact() {
     if (!formData.name || !formData.email || !formData.phone || !formData.message) {
       toast.current.show({
         severity: "error",
-        summary: "Fill",
+        summary: "Fills",
         detail: "Please fill all the field",
       });
       return;
@@ -46,7 +46,7 @@ export default function contact() {
       <div className="max-w-screen-lg h-screen mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 items-center">
           <div>
-            <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
+            <h1 className="text-4xl font-bold mb-4">Get in Touch </h1>
             <p className="text-lg leading-relaxed font-mono mb-8">
               Have a question, comment or just want to say hello? Fill out the form below and we'll
               get back to you as soon as possible.
