@@ -1,5 +1,11 @@
+import PageMetaHead from "@/components/MetaHead/PageMetaHead";
 import React from "react";
 
 export default function home() {
-  return <div>home</div>;
+  return (
+    <div>
+      <PageMetaHead title="Home" />
+      home
+    </div>
+  );
 }
