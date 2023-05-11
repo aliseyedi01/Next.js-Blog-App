@@ -17,6 +17,15 @@ export default function contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Perform validation
+    if (!formData.name || !formData.email || !formData.phone || !formData.message) {
+      toast.current.show({
+        severity: "error",
+        summary: "Fill",
+        detail: "Please fill all the field",
+      });
+      return;
+    }
     console.log(formData);
 
     setLoading(true);
