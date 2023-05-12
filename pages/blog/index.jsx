@@ -61,12 +61,18 @@ export default function Blog({ articles }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getDataApi() {
   const res = await fetch(
     "https://newsapi.org/v2/everything?q=technology&from=2023-05-04&to=2023-05-05&language=en&sortBy=publishedAt&apiKey=2765d2e713f34a409a42560bfa4c6f38&pageSize=30",
   );
   const data = await res.json();
   const articles = data.articles;
+
+  return articles;
+}
+
+export async function getStaticProps() {
+  const articles = await getDataApi();
 
   return {
     props: { articles },
