@@ -33,41 +33,43 @@ export default function Blog({ articles }) {
   }
 
   return (
-    <div className="h-screen pb-11 w-full bg-red-400 overflow-y-scroll">
-      <PageMetaHead title="Blog News" />
-      <h2 className="text-2xl font-semibold mb-4 p-3 pb-0">Blog News</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-        {articles.map((article) => (
-          <div key={article.url} className="bg-white w-full h-full rounded-lg shadow-lg ">
-            <a href={article.url}>
-              <Image
-                src={article?.urlToImage ? article.urlToImage : ImagePlaceholder}
-                alt={article.title}
-                width={900}
-                height={300}
-                loading="lazy"
-                className="h-48 w-full object-cover rounded-t-lg"
-              />
+    <div className="h-screen pb-11 w-full bg-red-400  ">
+      <ScrollPanel className=" w-full h-full  ">
+        <PageMetaHead title="Blog News" />
+        <h2 className="text-2xl font-semibold mb-4 p-3 pb-0">Blog News</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+          {articles.map((article) => (
+            <div key={article.url} className="bg-white w-full h-full rounded-lg shadow-lg ">
+              <a href={article.url}>
+                <Image
+                  src={article?.urlToImage ? article.urlToImage : ImagePlaceholder}
+                  alt={article.title}
+                  width={900}
+                  height={300}
+                  loading="lazy"
+                  className="h-48 w-full object-cover rounded-t-lg"
+                />
 
-              {/* <img
+                {/* <img
                 src={article.urlToImage ? article.urlToImage : ImagePlaceholder}
                 alt={article.title}
                 className="h-48 w-full object-cover rounded-t-lg"
               /> */}
-            </a>
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2">{article.title}</h3>
-              <p className="text-gray-500">{article.description}</p>
+              </a>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold mb-2">{article.title}</h3>
+                <p className="text-gray-500">{article.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <ScrollTop
-        target="parent"
-        threshold={200}
-        className="w-2rem h-2rem border-round-md bg-primary "
-        icon="pi pi-chevron-up text-base"
-      />
+          ))}
+        </div>
+        <ScrollTop
+          target="parent"
+          threshold={200}
+          className="w-2rem h-2rem border-round-md bg-primary	 "
+          icon="pi pi-chevron-up text-base"
+        />
+      </ScrollPanel>
     </div>
   );
 }

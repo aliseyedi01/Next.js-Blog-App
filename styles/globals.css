@@ -17,3 +17,13 @@
 
 /* prime flex */
 @import "primeflex/primeflex.css";
+
+/* ScrollPanel */
+
+.p-scrollpanel-bar {
+  @apply bg-gray-400 accent-amber-600 rounded-lg opacity-25 transition duration-700 w-4;
+}
+
+.p-scrollpanel {
+  @apply bg-red-400;
+}
