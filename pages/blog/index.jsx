@@ -12,8 +12,6 @@ export default function Blog({ articles }) {
     return null; // or render a loading spinner
   }
 
-  console.log(apiKey);
-
   return (
     <div className="h-screen pb-24  w-full bg-sky-200  ">
       <ScrollPanel className=" w-full h-full  ">

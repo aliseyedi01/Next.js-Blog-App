@@ -4,6 +4,7 @@ import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
+import { ScrollPanel } from "primereact/scrollpanel";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -42,17 +43,18 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-sky-200">
-      <div className="max-w-screen-lg h-screen mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-8 items-center">
-          <div>
-            <h1 className="text-4xl font-bold mb-4">Get in Touch </h1>
-            <p className="text-lg leading-relaxed font-mono mb-8">
-              Have a question, comment or just want to say hello? Fill out the form below and we'll
-              get back to you as soon as possible.
-            </p>
-          </div>
-          <div>
+    <>
+      <ScrollPanel className=" w-full h-full  md:overflow-y-hidden  ">
+        <div className=" bg-sky-200   md:overflow-y-hidden md:h-screen  pt-4 px-5 md:px-24 pb-32">
+          <div className="grid grid-cols-1 md:grid-cols-2  w-full gap-2 md:gap-8 items-center md:px-20">
+            <div>
+              <h1 className="text-4xl font-bold mb-2 md:mb-4">Get in Touch </h1>
+              <p className="text-lg leading-relaxed font-mono mb-4 md:mb-8">
+                Have a question, comment or just want to say hello? Fill out the form below and
+                we'll get back to you as soon as possible.
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 gap-4">
               <span className="p-float-label p-input-icon-left">
                 <i className="pi pi-user-edit" />
@@ -71,6 +73,7 @@ export default function Contact() {
                   id="email"
                   type="email"
                   className="w-full"
+                  autoComplete="off"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 />
@@ -103,13 +106,13 @@ export default function Contact() {
                 loading={loading}
                 iconPos=""
                 label="Send"
-                className="w-full px-[170px]"
+                className="w-full px-36 md:px-[270px]"
                 onClick={handleSubmit}
               />
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </ScrollPanel>
+    </>
   );
 }
