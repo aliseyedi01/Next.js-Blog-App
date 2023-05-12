@@ -26,7 +26,7 @@ export default function Contact() {
       });
       return;
     }
-    console.log(formData);
+    // console.log(formData);
 
     setLoading(true);
 

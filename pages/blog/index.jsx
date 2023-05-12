@@ -63,7 +63,7 @@ export default function Blog({ articles }) {
 
 export async function getDataApi() {
   const res = await fetch(
-    "https://newsapi.org/v2/everything?q=technology&from=2023-05-04&to=2023-05-05&language=en&sortBy=publishedAt&apiKey=2765d2e713f34a409a42560bfa4c6f38&pageSize=30",
+    "https://newsapi.org/v2/everything?q=technology&from=2023-05-04&to=2023-05-05&language=en&sortBy=publishedAt&apiKey=0aa43ac2957f409e9d2c8ccc1ceb37aa&pageSize=30",
   );
   const data = await res.json();
   const articles = data.articles;
