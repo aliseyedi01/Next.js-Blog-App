@@ -6,6 +6,7 @@ import { ScrollPanel } from "primereact/scrollpanel";
 import { useRouter } from "next/router";
 import ImagePlaceholder from "@/public/image/PlaceHolderImage.png";
 import { getDataApi } from "@/pages/blog/index";
+import { Button } from "primereact/button";
 
 export default function SinglePost({ articles }) {
   const router = useRouter();
@@ -18,12 +19,25 @@ export default function SinglePost({ articles }) {
     return null; // or render a loading spinner
   }
 
+  const backRoute = () => {
+    router.back();
+  };
+
   return (
     <div className="h-screen pb-11 w-full bg-sky-200  ">
       <ScrollPanel className=" w-full h-full ">
         <PageMetaHead title={article.title} />
         <div className="p-4 flex flex-col w-full ">
-          <h2 className="text-xl font-semibold mb-4 p-3 pb-0">{article.title}</h2>
+          <div className="flex items-baseline justify-start">
+            <Button
+              icon="pi pi-arrow-left"
+              text
+              severity="info"
+              aria-label="User"
+              onClick={backRoute}
+            />
+            <h2 className="text-xl font-semibold mb-4 p-3 pb-0 ">{article.title}</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 pt-4  place-content-center w-full px-2 gap-5 ">
             <div>
               <Image
