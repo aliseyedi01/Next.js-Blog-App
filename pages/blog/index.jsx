@@ -1,6 +1,8 @@
 import PageMetaHead from "@/components/MetaHead/PageMetaHead";
 import Image from "next/image";
 import React from "react";
+import { ScrollTop } from "primereact/scrolltop";
+import { ScrollPanel } from "primereact/scrollpanel";
 
 const ImagePlaceholder =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS33NUKvo6xLaAcTaCGFggAzBhYYEf7Rn2RzAVr5PB3NZ94VwKxFrAL_8KHjdXJqRbP6U0&usqp=CAU";
@@ -31,7 +33,7 @@ export default function Blog({ articles }) {
   }
 
   return (
-    <div className="h-screen w-full bg-red-400 overflow-y-scroll">
+    <div className="h-screen pb-11 w-full bg-red-400 overflow-y-scroll">
       <PageMetaHead title="Blog News" />
       <h2 className="text-2xl font-semibold mb-4 p-3 pb-0">Blog News</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
@@ -60,6 +62,12 @@ export default function Blog({ articles }) {
           </div>
         ))}
       </div>
+      <ScrollTop
+        target="parent"
+        threshold={200}
+        className="w-2rem h-2rem border-round-md bg-primary "
+        icon="pi pi-chevron-up text-base"
+      />
     </div>
   );
 }
