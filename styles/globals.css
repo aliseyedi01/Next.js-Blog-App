@@ -24,6 +24,10 @@
   @apply bg-gray-400 accent-amber-600 rounded-lg opacity-25 transition duration-700 w-4;
 }
 
-.p-scrollpanel {
-  @apply bg-red-400;
+.p-scrollpanel::-ms-thumb {
+  @apply bg-red-400 accent-red-600;
+}
+
+.p-scrollpanel::-ms-thumb:hover {
+  @apply bg-gray-400 accent-amber-600;
 }

@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="bg-cyan-100  min-h-screen w-full ">
+    <div className="bg-sky-200  min-h-screen w-full ">
       <PageMetaHead title="Home" />
       <div className="max-w-5xl mx-auto py-12 px-4  sm:px-6 lg:px-8">
         <div className="lg:text-center">
