@@ -82,7 +82,7 @@ export default function NavBar() {
   );
 
   return (
-    <div className="w-full p-3 px-6 bg-sky-200   ">
+    <div className="w-full p-3 px-4 md:px-6 bg-sky-200   ">
       <Menubar
         model={items}
         start={startTemplate}
