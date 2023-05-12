@@ -13,10 +13,12 @@ export default function App({ Component, pageProps }) {
   return (
     <div>
       <PageMetaHead />
-      <Header />
-      <main className={`${ubuntu.variable} font-sans`}>
-        <Component {...pageProps} />
-      </main>
+      <div className={`${ubuntu.variable} font-sans`}>
+        <main className=" overflow-y-hidden h-screen">
+          <Header className="sticky top-0 z-50" />
+          <Component {...pageProps} />
+        </main>
+      </div>
     </div>
   );
 }
