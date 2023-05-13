@@ -5,9 +5,8 @@ import { ScrollTop } from "primereact/scrolltop";
 import { ScrollPanel } from "primereact/scrollpanel";
 import Link from "next/link";
 import ImagePlaceholder from "@/public/image/PlaceHolderImage.png";
-const apiKey = process.env.NewsKey;
 
-export default function Blog({ articles }) {
+export default function BlogPost({ articles }) {
   if (!articles) {
     return null; // or render a loading spinner
   }
@@ -50,13 +49,21 @@ export default function Blog({ articles }) {
 }
 
 export async function getDataApi() {
-  const res = await fetch(
-    `https://newsapi.org/v2/everything?q=technology&from=2023-05-04&to=2023-05-05&language=en&sortBy=publishedAt&apiKey=${apiKey}&pageSize=30`,
-  );
-  const data = await res.json();
-  const articles = data.articles;
+  // const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
-  return articles;
+  const API_KEY = "0aa43ac2957f409e9d2c8ccc1ceb37aa";
+
+  console.log(API_KEY);
+  try {
+    const res = await fetch(
+      `https://newsapi.org/v2/everything?q=technology&from=2023-05-04&to=2023-05-05&language=en&sortBy=publishedAt&apiKey=${API_KEY}&pageSize=30`,
+    );
+    const data = await res.json();
+    const articles = data.articles;
+    return articles;
+  } catch (error) {
+    throw new Error(error);
+  }
 }
 
 export async function getStaticProps() {
