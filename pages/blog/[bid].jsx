@@ -5,15 +5,13 @@ import { ScrollTop } from "primereact/scrolltop";
 import { ScrollPanel } from "primereact/scrollpanel";
 import { useRouter } from "next/router";
 import ImagePlaceholder from "@/public/image/PlaceHolderImage.png";
-import { getDataApi } from "@/pages/blog/index";
 import { Button } from "primereact/button";
+import { getDataApi } from "@/lib/hooks/getDataApi";
 
 export default function SinglePost({ articles }) {
   const router = useRouter();
-  // console.log(router.query.bid);
   const IdArticle = router.query.bid;
   const article = articles?.find((item) => item.title == IdArticle);
-  // console.log(article);
 
   if (!article) {
     return null; // or render a loading spinner
@@ -45,9 +43,8 @@ export default function SinglePost({ articles }) {
                 alt={article.title}
                 width={900}
                 height={300}
-                loading="lazy"
+                priority
                 className="h-80 w-auto shadow-2xl object-cover rounded-lg cursor-pointer"
-                onClick={() => router.back()} // Go back to previous page on image click
               />
             </div>
             <div className="w-full">
