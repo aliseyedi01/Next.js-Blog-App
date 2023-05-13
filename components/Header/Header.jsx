@@ -47,14 +47,8 @@ export default function NavBar() {
 
   const startTemplate = (
     <div className="mr-6 flex items-center gap-2">
-      <Image
-        width="50"
-        height="50"
-        alt="blog"
-        src="/image/blog.png"
-        // src="https://cdn-icons-png.flaticon.com/512/1809/1809216.png"
-      />
-      <p className="font-mono text-xl uppercase font-bold">Blog</p>{" "}
+      <Image width="50" height="50" alt="blog" src="/image/blog.png" />
+      <p className="font-mono text-xl uppercase  font-bold">Blog</p>{" "}
     </div>
   );
 
@@ -73,14 +67,12 @@ export default function NavBar() {
         className="!border-none !outline-none !ring-0"
       />
       <Button text className="!border-none !outline-none !ring-0 py-2 grid place-items-center">
-        {/* <div className=" w-12 h-12   relative md:w-16 md:h-16  "> */}
-        <div className=" w-[3rem] h-[3rem]   relative md:w-16 md:h-16  ">
+        <div className=" w-[2rem] h-[2rem]   relative md:w-[50px] md:h-[50px]  rounded-full border-2 border-red-600 overflow-hidden ">
           <Image
-            width="100"
-            height="100"
+            width="50"
+            height="50"
             alt="blog"
             src="/image/avatar.jpg"
-            // src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-male-avatar-simple-cartoon-design-png-image_1934458.jpg"
             className="rounded-full "
           />
         </div>
