@@ -4,10 +4,11 @@ PrimeReact.ripple = true;
 import { Menubar } from "primereact/menubar";
 import { Button } from "primereact/button";
 import { Image } from "primereact/image";
+// import Image from "next/image";
 import { Badge } from "primereact/badge";
 import { useRouter } from "next/router";
-import avatar from "@/public/image/avatar.jpg";
-import blog from "@/public/image/blog.png";
+// import avatar from "/public/image/avatar.jpg";
+// import blog from "@/public/image/blog.png";
 
 export default function NavBar() {
   const router = useRouter();
@@ -49,8 +50,15 @@ export default function NavBar() {
 
   const startTemplate = (
     <div className="mr-6 flex items-center gap-2">
-      {/* <Image fill={true} alt="blog" src={avatar} /> */}
-      <Image width="50px" alt="" src="https://cdn-icons-png.flaticon.com/512/1809/1809216.png" />
+      <div className=" w-14 h-14 md:w-14 md:h-14 relative">
+        <Image
+          width="50"
+          height="50"
+          alt="blog"
+          src="/public/image/avatar.jpg"
+          // src="https://cdn-icons-png.flaticon.com/512/1809/1809216.png"
+        />
+      </div>
       <p className="font-mono text-xl uppercase font-bold">Blog</p>{" "}
     </div>
   );
@@ -70,13 +78,17 @@ export default function NavBar() {
         className="!border-none !outline-none !ring-0"
       />
       <Button text className="!border-none !outline-none !ring-0 py-2 grid place-items-center">
-        <Image
-          width="30px"
-          alt=""
-          // src={blog}
-          src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-male-avatar-simple-cartoon-design-png-image_1934458.jpg"
-          className="rounded-full"
-        />
+        {/* <div className=" w-12 h-12   relative md:w-16 md:h-16  "> */}
+        <div className=" w-[3rem] h-[3rem]   relative md:w-16 md:h-16  ">
+          <Image
+            width="100"
+            height="100"
+            alt="blog"
+            src="/public/image/blog.png"
+            // src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-male-avatar-simple-cartoon-design-png-image_1934458.jpg"
+            className="rounded-full "
+          />
+        </div>
       </Button>
     </div>
   );

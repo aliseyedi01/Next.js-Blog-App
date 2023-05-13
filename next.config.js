@@ -28,6 +28,8 @@ const nextConfig = {
       "thehillstimes.in",
       "encrypted-tbn0.gstatic.com",
       "www.thewrap.com",
+      "cdn-icons-png.flaticon.com",
+      "png.pngtree.com",
     ],
   },
 };
