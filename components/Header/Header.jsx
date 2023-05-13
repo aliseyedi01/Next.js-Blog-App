@@ -4,11 +4,8 @@ PrimeReact.ripple = true;
 import { Menubar } from "primereact/menubar";
 import { Button } from "primereact/button";
 import { Image } from "primereact/image";
-// import Image from "next/image";
 import { Badge } from "primereact/badge";
 import { useRouter } from "next/router";
-// import avatar from "/public/image/avatar.jpg";
-// import blog from "@/public/image/blog.png";
 
 export default function NavBar() {
   const router = useRouter();
@@ -50,15 +47,13 @@ export default function NavBar() {
 
   const startTemplate = (
     <div className="mr-6 flex items-center gap-2">
-      <div className=" w-14 h-14 md:w-14 md:h-14 relative">
-        <Image
-          width="50"
-          height="50"
-          alt="blog"
-          src="/public/image/avatar.jpg"
-          // src="https://cdn-icons-png.flaticon.com/512/1809/1809216.png"
-        />
-      </div>
+      <Image
+        width="50"
+        height="50"
+        alt="blog"
+        src="/image/blog.png"
+        // src="https://cdn-icons-png.flaticon.com/512/1809/1809216.png"
+      />
       <p className="font-mono text-xl uppercase font-bold">Blog</p>{" "}
     </div>
   );
@@ -84,7 +79,7 @@ export default function NavBar() {
             width="100"
             height="100"
             alt="blog"
-            src="/public/image/blog.png"
+            src="/image/avatar.jpg"
             // src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-male-avatar-simple-cartoon-design-png-image_1934458.jpg"
             className="rounded-full "
           />
