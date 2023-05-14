@@ -19,7 +19,7 @@ export default function NavBar() {
       icon: "pi pi-home",
       className: " font-bold font-mono",
       command: () => {
-        router.push("/home");
+        router.push("/");
       },
     },
     {
