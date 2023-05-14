@@ -6,7 +6,7 @@ import { ScrollPanel } from "primereact/scrollpanel";
 import { useRouter } from "next/router";
 import ImagePlaceholder from "@/public/image/PlaceHolderImage.png";
 import { Button } from "primereact/button";
-import { getDataApi } from "@/lib/hooks/getDataApi";
+import { getDataApi } from "@/lib/getDataApi";
 
 export default function SinglePost({ articles }) {
   const router = useRouter();
@@ -36,7 +36,7 @@ export default function SinglePost({ articles }) {
             />
             <h2 className="text-xl font-semibold mb-4 p-3 pb-0 ">{article.title}</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 pt-4  place-content-center w-full px-2 gap-5 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 pt-4 bg-red-600   place-content-center w-full px-2 gap-5 ">
             <div>
               <Image
                 src={article?.urlToImage ? article.urlToImage : ImagePlaceholder}
@@ -47,7 +47,7 @@ export default function SinglePost({ articles }) {
                 className="h-80 w-auto shadow-2xl object-cover rounded-lg cursor-pointer"
               />
             </div>
-            <div className="w-full">
+            <div className="w-full ">
               <p className="text-sky-800 text-2xl w-full my-4">{article.description}</p>
               <p className="text-sky-600 text-xl w-full my-4">{article.content}</p>
             </div>

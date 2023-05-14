@@ -6,7 +6,7 @@ import { ScrollPanel } from "primereact/scrollpanel";
 import Link from "next/link";
 import ImagePlaceholder from "@/public/image/PlaceHolderImage.png";
 import { Button } from "primereact/button";
-import { getDataApi } from "@/lib/hooks/getDataApi";
+import { getDataApi } from "@/lib/getDataApi";
 
 function Blog({ articles }) {
   if (!articles) {
@@ -14,10 +14,10 @@ function Blog({ articles }) {
   }
 
   return (
-    <div className="h-screen pb-24  w-full bg-sky-200  ">
+    <div className="h-screen pb-24  w-full bg-sky-200 dark:bg-indigo-950  ">
       <ScrollPanel className=" w-full h-full  ">
         <PageMetaHead title="Blog News" />
-        <h2 className="text-2xl font-semibold font-ubuntu mb-4 md:mb-3 p-3 md:px-6 pb-0">
+        <h2 className="text-2xl font-semibold font-ubuntu mb-4 md:mb-3 dark:text-white p-3 md:px-6 pb-0">
           Blog News
         </h2>
         <div className="grid grid-flow-row-dense grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 md:p-6 md:pt-2 p-4">

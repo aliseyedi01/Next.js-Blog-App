@@ -45,11 +45,11 @@ export default function Contact() {
   return (
     <>
       <ScrollPanel className=" w-full h-full  md:overflow-y-hidden  ">
-        <div className=" bg-sky-200   md:overflow-y-hidden md:h-screen  pt-4 px-5 md:px-24 pb-32">
+        <div className=" bg-sky-200  dark:bg-indigo-950  md:overflow-y-hidden md:h-screen  pt-4 px-5 md:px-24 pb-32">
           <div className="grid grid-cols-1 md:grid-cols-2  w-full gap-2 md:gap-8 items-center md:px-20">
             <div>
-              <h1 className="text-4xl font-bold mb-2 md:mb-4">Get in Touch </h1>
-              <p className="text-lg leading-relaxed font-mono mb-4 md:mb-8">
+              <h1 className="text-4xl font-bold mb-2 md:mb-4 dark:text-slate-200">Get in Touch </h1>
+              <p className="text-lg leading-relaxed font-mono mb-4 md:mb-8 dark:text-slate-400">
                 Have a question, comment or just want to say hello? Fill out the form below and
                 we'll get back to you as soon as possible.
               </p>
