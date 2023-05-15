@@ -75,7 +75,7 @@ export async function getStaticProps() {
 export async function getStaticPaths() {
   const articles = await getDataApi();
 
-  const paths = articles.map((article) => ({ params: { bid: article.title } }));
+  const paths = articles?.map((article) => ({ params: { bid: article.title } }));
 
   return {
     paths: paths,
