@@ -1,6 +1,6 @@
 import PageMetaHead from "@/components/MetaHead/PageMetaHead";
 import Image from "next/image";
-import AboutImage from "@/public/image/About.jpg";
+import AboutImage from "@/public/image/about.jpg";
 import { ScrollPanel } from "primereact/scrollpanel";
 
 export default function About() {
