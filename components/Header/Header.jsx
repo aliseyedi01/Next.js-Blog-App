@@ -47,14 +47,14 @@ export default function NavBar() {
   const startTemplate = (
     <div className="mr-6 flex items-center gap-2">
       <Image width="50" height="50" alt="blog" src="/image/blog.png" />
-      <p className="font-mono text-xl uppercase  font-bold">Blog</p>{" "}
+      <p className="font-mono text-xl font-bold  uppercase">Blog</p>{" "}
     </div>
   );
 
   const endTemplate = (
     <div className="flex items-center gap-x-2">
       <DarkMode />
-      <div className=" w-[2rem] h-[2rem]   relative md:w-[35px] md:h-[35px]  rounded-full border-2 border-red-600 overflow-hidden ">
+      <div className=" relative h-[2rem]   w-[2rem] overflow-hidden rounded-full  border-2 border-red-600 md:h-[35px] md:w-[35px] ">
         <Image
           width="50"
           height="50"
@@ -67,12 +67,12 @@ export default function NavBar() {
   );
 
   return (
-    <div className="w-full p-3 px-4 md:px-6 bg-sky-200 dark:bg-indigo-950   ">
+    <div className="w-full bg-sky-200 p-3 px-4 dark:bg-indigo-950 md:px-6   ">
       <Menubar
         model={items}
         start={startTemplate}
         end={endTemplate}
-        className="border border-indigo-500 dark:bg-cyan-200  rounded-lg"
+        className="rounded-lg border border-indigo-500  dark:bg-cyan-200"
       />
     </div>
   );

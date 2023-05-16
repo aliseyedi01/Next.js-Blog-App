@@ -41,15 +41,15 @@ export default function Contact() {
 
   return (
     <>
-      <div className=" bg-sky-200  dark:bg-indigo-950 w-full h-full     pt-4 px-5 md:px-24 pb-32">
+      <div className=" h-full  w-full bg-sky-200 px-5     pb-32 pt-4 dark:bg-indigo-950 md:px-24">
         <PageMetaHead title="Contact" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 h-full  w-full gap-2 md:gap-8 items-center md:px-20">
+        <div className="grid h-full w-full grid-cols-1  items-center gap-2 md:grid-cols-2 md:gap-8 md:px-20">
           <div>
-            <h1 className=" text-2xl md:text-4xl font-bold mb-1 md:mb-4 dark:text-slate-200">
+            <h1 className=" mb-1 text-2xl font-bold dark:text-slate-200 md:mb-4 md:text-4xl">
               Get in Touch{" "}
             </h1>
-            <p className="text-lg leading-relaxed font-mono mb-4 md:mb-8 dark:text-slate-400">
+            <p className="mb-4 font-mono text-lg leading-relaxed dark:text-slate-400 md:mb-8">
               Have a question, comment or just want to say hello? Fill out the form below and we'll
               get back to you as soon as possible.
             </p>

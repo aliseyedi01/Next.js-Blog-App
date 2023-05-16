@@ -22,10 +22,10 @@ export default function SinglePost({ articles }) {
   };
 
   return (
-    <div className="h-screen pb-11 w-full bg-sky-200 dark:bg-indigo-950 relative  ">
-      <ScrollPanel className=" w-full h-full ">
+    <div className="relative h-screen w-full bg-sky-200 pb-11 dark:bg-indigo-950  ">
+      <ScrollPanel className=" h-full w-full ">
         <PageMetaHead title={article.title} />
-        <div className="p-4 flex flex-col w-full ">
+        <div className="flex w-full flex-col p-4 ">
           <div className="flex items-baseline justify-start">
             <Button
               icon="pi pi-arrow-left"
@@ -34,11 +34,11 @@ export default function SinglePost({ articles }) {
               aria-label="User"
               onClick={backRoute}
             />
-            <h2 className="text-xl font-semibold mb-4 p-3 pb-0  text-sky-600 dark:text-yellow-300">
+            <h2 className="mb-4 p-3 pb-0 text-xl font-semibold  text-sky-600 dark:text-yellow-300">
               {article.title}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 pt-4    place-content-center w-full px-2 gap-5 ">
+          <div className="grid w-full grid-cols-1 place-content-center    gap-5 px-2 pt-4 md:grid-cols-2 ">
             <div>
               <Image
                 src={article?.urlToImage ? article.urlToImage : ImagePlaceholder}
@@ -46,14 +46,14 @@ export default function SinglePost({ articles }) {
                 width={900}
                 height={300}
                 priority
-                className="h-80 w-auto shadow-2xl object-cover rounded-lg cursor-pointer"
+                className="h-80 w-auto cursor-pointer rounded-lg object-cover shadow-2xl"
               />
             </div>
             <div className="w-full ">
-              <p className="text-sky-800 dark:text-gray-300 text-2xl w-full my-4">
+              <p className="my-4 w-full text-2xl text-sky-800 dark:text-gray-300">
                 {article.description}
               </p>
-              <p className="text-sky-600 dark:text-sky-400 text-xl w-full my-4">
+              <p className="my-4 w-full text-xl text-sky-600 dark:text-sky-400">
                 {article.content}
               </p>
             </div>
@@ -63,7 +63,7 @@ export default function SinglePost({ articles }) {
           target="parent"
           threshold={100}
           icon="pi pi-chevron-up text-base "
-          className="w-3rem h-3rem md:w-4rem md:h-4rem border-round-md bg-primary md:hidden  sticky bottom-20 right-7	"
+          className="w-3rem h-3rem md:w-4rem md:h-4rem border-round-md bg-primary sticky  bottom-20 right-7 md:hidden	"
         />
       </ScrollPanel>
     </div>

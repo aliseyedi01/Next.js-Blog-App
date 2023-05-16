@@ -5,14 +5,14 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="bg-sky-200  min-h-screen w-full dark:bg-indigo-950  ">
+    <div className="min-h-screen  w-full bg-sky-200 dark:bg-indigo-950  ">
       <PageMetaHead title="Home" />
-      <div className="max-w-5xl mx-auto py-12 px-4  sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 py-12  sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <h2 className="text-base text-emerald-600 dark:text-gray-400 font-semibold tracking-wide uppercase">
+          <h2 className="text-base font-semibold uppercase tracking-wide text-emerald-600 dark:text-gray-400">
             Welcome to Blog App
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-800 dark:text-red-500  sm:text-4xl">
+          <p className="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-800 dark:text-red-500  sm:text-4xl">
             A Simple Blog App
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 dark:text-slate-100 lg:mx-auto">
@@ -21,7 +21,7 @@ export default function Home() {
             learn Next.js and build a simple blog app.
           </p>
 
-          <div className="mt-10 flex sm:justify-center lg:justify-center gap-3">
+          <div className="mt-10 flex gap-3 sm:justify-center lg:justify-center">
             <Link href="/blog">
               <Button type="button" label="Get Start" icon="pi pi-slack" severity="danger" raised />
             </Link>

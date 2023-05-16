@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
     <div>
       <PageMetaHead />
       <div className={`${ubuntu.variable} font-sans`}>
-        <main className=" overflow-y-hidden h-screen">
+        <main className=" h-screen overflow-y-hidden">
           <Header className="sticky top-0 z-50" />
           <Component {...pageProps} />
         </main>

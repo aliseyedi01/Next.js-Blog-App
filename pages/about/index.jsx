@@ -5,11 +5,11 @@ import { ScrollPanel } from "primereact/scrollpanel";
 
 export default function About() {
   return (
-    <div className="bg-sky-200 h-screen pb-20 dark:bg-indigo-950">
-      <ScrollPanel className=" w-full h-full  ">
+    <div className="h-screen bg-sky-200 pb-20 dark:bg-indigo-950">
+      <ScrollPanel className=" h-full w-full  ">
         <PageMetaHead title="About" />
-        <div className="max-w-screen-lg mx-auto px-4  lg:px-8 py-3">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:grid-flow-row grid-flow-row-dense md:gap-8 items-center">
+        <div className="mx-auto max-w-screen-lg px-4  py-3 lg:px-8">
+          <div className="grid grid-flow-row-dense grid-cols-1 items-center gap-4 md:grid-flow-row md:grid-cols-2 md:gap-8">
             <div className="w-full">
               <Image
                 src={AboutImage}
@@ -20,8 +20,8 @@ export default function About() {
               />
             </div>
             <div className="mb-4 md:mb-0">
-              <h1 className="text-4xl font-bold mb-4 dark:text-slate-200">About Our Blog </h1>
-              <p className=" leading-loose font-serif text-justify text-lg  dark:text-slate-300 ">
+              <h1 className="mb-4 text-4xl font-bold dark:text-slate-200">About Our Blog </h1>
+              <p className=" text-justify font-serif text-lg leading-loose  dark:text-slate-300 ">
                 Welcome to our blog! We are a team of passionate writers and content creators who
                 are dedicated to providing informative and engaging articles on various topics that
                 matter to you.
