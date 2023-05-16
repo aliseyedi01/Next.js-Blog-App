@@ -6,12 +6,10 @@ import { Button } from "primereact/button";
 import { Image } from "primereact/image";
 import { Badge } from "primereact/badge";
 import { useRouter } from "next/router";
-import useDarkMode from "@/lib/hooks/useDarkMode";
 import DarkMode from "./DarkMode.Button";
 
 export default function NavBar() {
   const router = useRouter();
-  const [darkMode, setDarkMode, handleThemeChange] = useDarkMode();
 
   const items = [
     {

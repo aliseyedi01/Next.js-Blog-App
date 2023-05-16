@@ -22,7 +22,7 @@ export default function SinglePost({ articles }) {
   };
 
   return (
-    <div className="h-screen pb-11 w-full bg-sky-200  ">
+    <div className="h-screen pb-11 w-full bg-sky-200 dark:bg-indigo-950 relative  ">
       <ScrollPanel className=" w-full h-full ">
         <PageMetaHead title={article.title} />
         <div className="p-4 flex flex-col w-full ">
@@ -34,9 +34,11 @@ export default function SinglePost({ articles }) {
               aria-label="User"
               onClick={backRoute}
             />
-            <h2 className="text-xl font-semibold mb-4 p-3 pb-0 ">{article.title}</h2>
+            <h2 className="text-xl font-semibold mb-4 p-3 pb-0  text-sky-600 dark:text-yellow-300">
+              {article.title}
+            </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 pt-4 bg-red-600   place-content-center w-full px-2 gap-5 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 pt-4    place-content-center w-full px-2 gap-5 ">
             <div>
               <Image
                 src={article?.urlToImage ? article.urlToImage : ImagePlaceholder}
@@ -48,16 +50,20 @@ export default function SinglePost({ articles }) {
               />
             </div>
             <div className="w-full ">
-              <p className="text-sky-800 text-2xl w-full my-4">{article.description}</p>
-              <p className="text-sky-600 text-xl w-full my-4">{article.content}</p>
+              <p className="text-sky-800 dark:text-gray-300 text-2xl w-full my-4">
+                {article.description}
+              </p>
+              <p className="text-sky-600 dark:text-sky-400 text-xl w-full my-4">
+                {article.content}
+              </p>
             </div>
           </div>
         </div>
         <ScrollTop
           target="parent"
-          threshold={200}
-          className="w-2rem h-2rem border-round-md bg-primary	 "
-          icon="pi pi-chevron-up text-base"
+          threshold={100}
+          icon="pi pi-chevron-up text-base "
+          className="w-3rem h-3rem md:w-4rem md:h-4rem border-round-md bg-primary md:hidden  sticky bottom-20 right-7	"
         />
       </ScrollPanel>
     </div>

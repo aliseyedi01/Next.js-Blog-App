@@ -62,8 +62,8 @@ function Blog({ articles }) {
         </div>
         <ScrollTop
           target="parent"
-          threshold={200}
-          className="w-2rem h-2rem md:w-3rem md:h-3rem border-round-md bg-primary	 "
+          threshold={100}
+          className="w-3rem h-3rem  border-round-md bg-primary sticky bottom-20 md:bottom-7 right-7 md:right-5 "
           icon="pi pi-chevron-up text-base"
         />
       </ScrollPanel>
