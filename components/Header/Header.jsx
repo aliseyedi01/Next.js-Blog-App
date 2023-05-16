@@ -2,11 +2,9 @@ import PrimeReact from "primereact/api";
 PrimeReact.ripple = true;
 
 import { Menubar } from "primereact/menubar";
-import { Button } from "primereact/button";
 import { Image } from "primereact/image";
-import { Badge } from "primereact/badge";
 import { useRouter } from "next/router";
-import DarkMode from "./DarkMode.Button";
+import DarkMode from "./DarkModeButton";
 
 export default function NavBar() {
   const router = useRouter();

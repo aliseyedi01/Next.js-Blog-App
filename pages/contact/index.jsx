@@ -4,7 +4,6 @@ import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 import { Button } from "primereact/button";
 import { Toast } from "primereact/toast";
-import { ScrollPanel } from "primereact/scrollpanel";
 
 export default function Contact() {
   const [loading, setLoading] = useState(false);
@@ -27,17 +26,15 @@ export default function Contact() {
       });
       return;
     }
-    // console.log(formData);
 
     setLoading(true);
-
     setTimeout(() => {
       setLoading(false);
     }, 2000);
 
     // Perform validation and submit form data to server
-
     toast.current.show({ severity: "info", summary: "Send", detail: "Send your Question" });
+
     // Reset form data state to empty values
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
@@ -45,6 +42,8 @@ export default function Contact() {
   return (
     <>
       <div className=" bg-sky-200  dark:bg-indigo-950 w-full h-full     pt-4 px-5 md:px-24 pb-32">
+        <PageMetaHead title="Contact" />
+
         <div className="grid grid-cols-1 md:grid-cols-2 h-full  w-full gap-2 md:gap-8 items-center md:px-20">
           <div>
             <h1 className=" text-2xl md:text-4xl font-bold mb-1 md:mb-4 dark:text-slate-200">

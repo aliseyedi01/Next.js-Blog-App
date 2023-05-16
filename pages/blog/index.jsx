@@ -10,7 +10,7 @@ import { getDataApi } from "@/lib/getDataApi";
 
 function Blog({ articles }) {
   if (!articles) {
-    return null; // or render a loading spinner
+    return null;
   }
 
   return (
